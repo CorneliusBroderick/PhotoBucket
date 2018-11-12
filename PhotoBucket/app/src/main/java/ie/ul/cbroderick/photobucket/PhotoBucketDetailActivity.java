@@ -101,7 +101,7 @@ public class PhotoBucketDetailActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         View view = getLayoutInflater().inflate(R.layout.photobucket_dialog, null, false );
         builder.setView(view);
-        builder.setTitle("Edit this quote");
+        builder.setTitle("Edit Photo");
         final TextView quoteEditText = view.findViewById(R.id.dialog_quote_edittext);
         final TextView movieEditText = view.findViewById(R.id.dialog_movie_edittext);
 

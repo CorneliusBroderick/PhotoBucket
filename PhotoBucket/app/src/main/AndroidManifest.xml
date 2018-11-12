@@ -21,7 +21,7 @@
         </activity>
         <activity
             android:name=".PhotoBucketDetailActivity"
-            android:label="Caption imageUrl"
+            android:label="Photo"
             android:theme="@style/AppTheme.NoActionBar">
     </activity>
     </application>

@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         View view = getLayoutInflater().inflate(R.layout.photobucket_dialog, null, false );
         builder.setView(view);
-        builder.setTitle("Add a caption with imageUrl");
+        builder.setTitle("Add a new Photo");
         final TextView quoteEditText = view.findViewById(R.id.dialog_quote_edittext);
         final TextView movieEditText = view.findViewById(R.id.dialog_movie_edittext);
         builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
