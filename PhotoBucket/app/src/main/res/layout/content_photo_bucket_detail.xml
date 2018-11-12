@@ -15,8 +15,7 @@
     <ImageView
         android:id="@+id/detail_movie"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/common_full_open_on_phone"/>
+        android:layout_height="319dp" />
 
     <TextView
         android:id="@+id/detail_quote"
