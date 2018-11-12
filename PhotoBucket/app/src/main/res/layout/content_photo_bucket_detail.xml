@@ -8,17 +8,17 @@
     android:layout_height="match_parent"
     android:padding="20dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MovieQuoteDetailActivity"
-    tools:showIn="@layout/activity_movie_quote_detail">
+    tools:context=".PhotoBucketDetailActivity"
+    tools:showIn="@layout/activity_photo_bucket_detail">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quote"/>
+        android:text="Caption"/>
 
     <TextView
         android:id="@+id/detail_quote"
-        android:text="Quote goes here"
+        android:text="Enter a caption "
         android:textColor="@android:color/black"
         android:textSize="20sp"
         android:layout_margin="20dp"
@@ -26,19 +26,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <TextView
+
+    <ImageView
+        android:id="@+id/detail_movie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Movie"/>
-
-    <TextView
-        android:id="@+id/detail_movie"
-        android:text="Movie goes here"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:layout_margin="20dp"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:src="@drawable/common_full_open_on_phone"/>
 
 </LinearLayout>

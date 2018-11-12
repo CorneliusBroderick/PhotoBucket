@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.firestore.DocumentReference;
@@ -17,6 +18,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.koushikdutta.ion.Ion;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -31,7 +33,7 @@ public class PhotoBucketDetailActivity extends AppCompatActivity {
     private DocumentSnapshot mDocSnapshot;
 
     private TextView mQuoteTextView;
-    private TextView mMovieTextView;
+    private ImageView mMovieImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +42,7 @@ public class PhotoBucketDetailActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mQuoteTextView = findViewById(R.id.detail_quote);
-        mMovieTextView = findViewById(R.id.detail_movie);
+        mMovieImageView = findViewById(R.id.detail_movie);
 
         String docId = getIntent().getStringExtra(Constants.EXTRA_DOC_ID);
 
@@ -57,7 +59,12 @@ public class PhotoBucketDetailActivity extends AppCompatActivity {
                 if (documentSnapshot.exists()){
                     mDocSnapshot = documentSnapshot;
                     mQuoteTextView.setText((String)documentSnapshot.get(Constants.KEY_QUOTE));
-                    mMovieTextView.setText((String)documentSnapshot.get(Constants.KEY_MOVIE));
+
+                    //mMovieTextView.setText((String)documentSnapshot.get(Constants.KEY_MOVIE));
+
+                    // https://github.com/koush/ion
+                    //Ion.with()
+                    Ion.with(mMovieImageView).load((String)documentSnapshot.get(Constants.KEY_MOVIE));
                 }
             }
         });

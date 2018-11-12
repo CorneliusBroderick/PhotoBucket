@@ -7,12 +7,12 @@
 
     <EditText
         android:id="@+id/dialog_quote_edittext"
-        android:hint="Enter a caption here"
+        android:hint="Enter a caption "
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
         android:id="@+id/dialog_movie_edittext"
-        android:hint="Enter a urlImage here"
+        android:hint="Enter the url of an image or leave blank"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>
