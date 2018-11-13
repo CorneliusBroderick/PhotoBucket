@@ -64,10 +64,11 @@ public class PhotoBucketAdapter extends RecyclerView.Adapter<PhotoBucketAdapter.
         //photobucketViewHolder.mMovieTextView.setText(movie);
 
 
-        //Ion.with()
-        //Ion.with(mMovieImageView).load((String)documentSnapshot.get(Constants.KEY_MOVIE));
-        //Ion.with(movie).load((String)documentSnapshot.get(Constants.KEY_MOVIE));
-        Ion.with(photobucketViewHolder.mMovieImageView).load(movie);
+        //Ion.with() for preview
+
+        //Ion.with(photobucketViewHolder.mMovieImageView).load(movie);
+
+
 
     }
 

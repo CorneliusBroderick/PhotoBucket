@@ -65,7 +65,13 @@ public class PhotoBucketDetailActivity extends AppCompatActivity {
 
                     // https://github.com/koush/ion
                     //Ion.with()
-                    Ion.with(mMovieImageView).load((randomImageUrl()));
+                    if (documentSnapshot.get(Constants.KEY_MOVIE) == Constants.EMPTY) {
+                        Ion.with(mMovieImageView).load((randomImageUrl()));
+                    }
+                    else {
+                        Ion.with(mMovieImageView).load((String)documentSnapshot.get(Constants.KEY_MOVIE));
+                    }
+
                 }
             }
         });
